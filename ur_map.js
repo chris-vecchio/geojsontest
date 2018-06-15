@@ -2,7 +2,12 @@ var chartData = {
     chart: {
         map: geodata,
         width: null,
-        height: null
+        height: null,
+        events: {
+            load: function() {
+                console.log('inside chart',geodata);
+            }
+        }
     },
     title: {
         text: "Labels using Highmaps default positions",
