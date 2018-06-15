@@ -2,18 +2,18 @@ var chartData = {
     chart: {
 //         map: geodata,
         width: null,
-        height: null,
-        events: {
-            load: function() {
-                console.log('inside chart', geodata);
-                this.update({
-                    chart: {
-                        data: geodata
-                    },
-                    series: [{data: data}]
-                })
-            }
-        }
+        height: null
+//         events: {
+//             load: function() {
+//                 console.log('inside chart', geodata);
+//                 this.update({
+//                     chart: {
+//                         data: geodata
+//                     },
+//                     series: [{data: data}]
+//                 })
+//             }
+//         }
     },
     title: {
         text: "Labels using Highmaps default positions",
