@@ -9,7 +9,8 @@ var chartData = {
                 this.update({
                     chart: {
                         data: geodata
-                    }
+                    },
+                    series: [{data: data}]
                 })
             }
         }
@@ -98,7 +99,7 @@ var chartData = {
         }]
     },
     series: [{
-        data: data,
+        //data: data,
         keys: ["id", "value"],
         joinBy: ["STUSPS", "code"],
         name: "Unemployment Rate",
