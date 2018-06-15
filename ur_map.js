@@ -1,19 +1,7 @@
 var chartData = {
     chart: {
-//         map: geodata,
         width: null,
         height: null
-//         events: {
-//             load: function() {
-//                 console.log('inside chart', geodata);
-//                 this.update({
-//                     chart: {
-//                         data: geodata
-//                     },
-//                     series: [{data: data}]
-//                 })
-//             }
-//         }
     },
     title: {
         text: "Labels using Highmaps default positions",
@@ -98,50 +86,5 @@ var chartData = {
             name: 'Greater than 5.6%'
         }]
     },
-//     series: [{}]
-                    series: [{
-                        data: data,
-                        mapData: geodata,
-                        keys: ["id", "value"],
-                        joinBy: ["STUSPS", "code"],
-                        name: "Unemployment Rate",
-                        states: {
-                            hover: {
-                                color: "#a4edba"
-                            }
-                        },
-                        dataLabels: {
-                            enabled: true,
-                            inside: false,
-                            format: "{point.properties.STUSPS}",
-                            color: 'contrast',
-                            style: {
-                                fontWeight: 'normal',
-                                fontSize: '8px',
-                                textOutline: 'none'
-                            }
-                        }
-                    }]
-//     series: [{
-//         //data: data,
-//         keys: ["id", "value"],
-//         joinBy: ["STUSPS", "code"],
-//         name: "Unemployment Rate",
-//         states: {
-//             hover: {
-//                 color: "#a4edba"
-//             }
-//         },
-//         dataLabels: {
-//             enabled: true,
-//             inside: false,
-//             format: "{point.properties.STUSPS}",
-//             color: 'contrast',
-//             style: {
-//                 fontWeight: 'normal',
-//                 fontSize: '8px',
-//                 textOutline: 'none'
-//             }
-//         }
-//     }]
+    series: [{}]
 };
