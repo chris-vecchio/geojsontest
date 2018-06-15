@@ -1,39 +1,8 @@
 var chartData = {
     chart: {
+        map: geodata,
         width: null,
         height: null,
-        events: {
-            load: function() {
-                this.update({
-                    chart: {
-                        map: geodata
-                    },
-                    series: [{
-                        data: data,
-                        keys: ["id", "value"],
-                        joinBy: ["STUSPS", "code"],
-                        name: "Unemployment Rate",
-                        states: {
-                            hover: {
-                                color: "#a4edba"
-                            }
-                        },
-                        dataLabels: {
-                            enabled: true,
-                            inside: false,
-                            format: "{point.properties.STUSPS}",
-                            color: 'contrast',
-                            style: {
-                                fontWeight: 'normal',
-                                fontSize: '8px',
-                                textOutline: 'none'
-                            }
-                        }
-                    }]
-                });
-                console.log('load function complete!');
-            }
-        }
     },
     title: {
         text: "Labels using Highmaps default positions",
@@ -89,11 +58,6 @@ var chartData = {
     colors: ['#e7e1ef', '#d4b9da', '#c994c7', '#df65b0', '#e7298a', '#ce1256', '#91003f'],
     colorAxis: {
         tickPixelInterval: 100,
-        labels: {
-            formatter: function() {
-                return this.from + '%';
-            }
-        },
         dataClassColor: 'category',
         dataClasses: [{
             to: 2.9,
@@ -123,5 +87,26 @@ var chartData = {
             name: 'Greater than 5.6%'
         }]
     },
-    series: []
+    series: [{
+        data: data,
+        keys: ["id", "value"],
+        joinBy: ["STUSPS", "code"],
+        name: "Unemployment Rate",
+        states: {
+            hover: {
+                color: "#a4edba"
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            inside: false,
+            format: "{point.properties.STUSPS}",
+            color: 'contrast',
+            style: {
+                fontWeight: 'normal',
+                fontSize: '8px',
+                textOutline: 'none'
+            }
+        }
+    }]
 };
