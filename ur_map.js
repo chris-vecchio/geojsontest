@@ -1,8 +1,39 @@
 var chartData = {
     chart: {
-        map: null,
         width: null,
-        height: null
+        height: null,
+        events: {
+            load: function() {
+                this.update({
+                    chart: {
+                        map: geodata
+                    },
+                    series: [{
+                        data: data,
+                        keys: ["id", "value"],
+                        joinBy: ["STUSPS", "code"],
+                        name: "Unemployment Rate",
+                        states: {
+                            hover: {
+                                color: "#a4edba"
+                            }
+                        },
+                        dataLabels: {
+                            enabled: true,
+                            inside: false,
+                            format: "{point.properties.STUSPS}",
+                            color: 'contrast',
+                            style: {
+                                fontWeight: 'normal',
+                                fontSize: '8px',
+                                textOutline: 'none'
+                            }
+                        }
+                    }]
+                });
+                console.log('load function complete!');
+            }
+        }
     },
     title: {
         text: "Labels using Highmaps default positions",
