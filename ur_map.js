@@ -1,11 +1,16 @@
 var chartData = {
     chart: {
-        map: geodata,
+//         map: geodata,
         width: null,
         height: null,
         events: {
             load: function() {
-                console.log('inside chart',geodata);
+                console.log('inside chart', geodata);
+                this.update({
+                    chart: {
+                        data: geodata
+                    }
+                })
             }
         }
     },
