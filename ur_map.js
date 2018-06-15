@@ -2,7 +2,7 @@ var chartData = {
     chart: {
         map: geodata,
         width: null,
-        height: null,
+        height: null
     },
     title: {
         text: "Labels using Highmaps default positions",
