@@ -87,26 +87,5 @@ var chartData = {
             name: 'Greater than 5.6%'
         }]
     },
-    series: [{
-        data: data,
-        keys: ["id", "value"],
-        joinBy: ["id", "id"],
-        name: "Unemployment Rate",
-        states: {
-            hover: {
-                color: "#a4edba"
-            }
-        },
-        dataLabels: {
-            enabled: true,
-            inside: false,
-            format: "{point.properties.name}",
-            color: 'contrast',
-            style: {
-                fontWeight: 'normal',
-                fontSize: '8px',
-                textOutline: 'none'
-            }
-        }
-    }]
+    series: [{}]
 };
